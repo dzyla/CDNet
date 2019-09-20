@@ -30,7 +30,7 @@ def get_ss(file):
 
         p.get_structure("structure", pdbl.retrieve_pdb_file(file, file_format='pdb'))
 
-        f = os.popen('find /mnt/c/linux/python_kurs/deep_learning/CD_net/ -iname *{}*.ent'.format(file))
+        f = os.popen('find . -iname *{}*.ent'.format(file))
         path = f.read().replace('\n', '')
 
         structure = p.get_structure("", path)
